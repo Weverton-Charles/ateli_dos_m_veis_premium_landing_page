@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ateliê dos Móveis - Marcenaria de Alto Padrão</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "wood-brown": "#3A2A1D",
+                        "off-white": "#F5F1EB",
+                        "matte-gold": "#C8A15A",
+                        "matte-black": "#121212",
+                    },
+                    fontFamily: {
+                        "serif": ["Playfair Display", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                @apply bg-off-white text-wood-brown font-sans antialiased;
+            }
+            h1, h2, h3, h4 {
+                @apply font-serif;
+            }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        details[open] .accordion-content {
+            max-height: 500px;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-matte-gold selection:text-white">
+    <header class="fixed top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-wood-brown/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-matte-gold text-4xl">carpenter</span>
+                <div class="flex flex-col">
+                    <span class="text-wood-brown text-xl font-bold uppercase tracking-widest leading-none">Ateliê dos
+                        Móveis</span>
+                    <span class="text-[10px] text-matte-gold uppercase tracking-[0.3em] font-medium">Marcenaria
+                        Premium</span>
+                </div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-matte-gold transition-colors" href="#inicio">Início</a>
+                <a class="text-sm font-medium hover:text-matte-gold transition-colors" href="#sobre">Sobre</a>
+                <a class="text-sm font-medium hover:text-matte-gold transition-colors"
+                    href="#diferenciais">Diferenciais</a>
+                <a class="text-sm font-medium hover:text-matte-gold transition-colors" href="#portfolio">Portfólio</a>
+                <a class="text-sm font-medium hover:text-matte-gold transition-colors" href="#processo">Processo</a>
+                <a class="text-sm font-medium hover:text-matte-gold transition-colors" href="#contato">Contato</a>
+            </nav>
+            <a class="hidden md:block bg-matte-gold hover:bg-[#b58f4d] text-white px-8 py-3 rounded-sm text-sm font-bold uppercase tracking-wider transition-all"
+                href="#contato">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </header>
+    <section class="relative h-screen min-h-[700px] flex items-center" id="inicio">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="w-full h-full bg-cover bg-center"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdie9S7bt1i2u7Agg0ZK-6jAzZtoPumz0uvW74oRNojf4blea3PiEN2f4PuOsPScxB4hSyOmad2bMfMsAW8Jv2SoTcsqPUCB_9_R3__Us6qHFEZhyOqIJn2FgkDrleg65K--grNlDocqQPwJvGL4N3QOv83CiBZY3e0juw3ZoFE_VswKTb4qL9bQ19vxOHfECw_W_W9MOGnHybqkoYorHRXytBnNYkb9PrgoYa9IEYcB5R7VmHiX8dgTmA3imPuz3UtE1jA5poUSE');">
+            </div>
+        </div>
+        <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-12 w-full text-white">
+            <div class="max-w-3xl">
+                <span
+                    class="inline-block text-matte-gold uppercase tracking-[0.4em] text-sm mb-6 font-semibold">Exclusividade
+                    &amp; Design</span>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] mb-8">
+                    A Arte da Marcenaria em Móveis Planejados
+                </h1>
+                <p class="text-lg lg:text-xl text-white/90 font-light mb-10 max-w-2xl leading-relaxed">
+                    Design exclusivo, materiais nobres e acabamento impecável para transformar seus ambientes em
+                    cenários de puro luxo e sofisticação.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a class="bg-matte-gold hover:bg-[#b58f4d] text-white px-10 py-5 text-sm font-bold uppercase tracking-widest transition-all"
+                        href="#contato">
+                        Solicitar Orçamento
+                    </a>
+                    <a class="border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-wood-brown px-10 py-5 text-sm font-bold uppercase tracking-widest transition-all flex items-center gap-2"
+                        href="https://wa.me/">
+                        <span class="material-symbols-outlined text-[20px]">chat</span>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 lg:py-32 bg-off-white overflow-hidden" id="sobre">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 border border-matte-gold/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
+                    </div>
+                    <div class="h-[600px] w-full bg-cover bg-center shadow-2xl"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaLUkotB2q65ZidIsU7arol5gHhsA1CWUdiQ0fZl6ThxcMm7uGuWl_n-7S01ALm8Jxi0pj2mfQRLmg1l7jjY1CQLc21y-vFRGpmHxnloyFntDSUFAQr1zit_qVlZwMI0oXQUYJJolhWdMCKwfhHcy1I4wDlia96AAtCphUETSqTsNlpQUrvGggHqpvBEu7ZxRSxU2Sxr1m4DkqZl5bULTFNQ0Lgg3QWz_M0MeU07x2gmxl5ePgNKWJmgzJveItNqn_eviiMtpQvhM');">
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-matte-gold uppercase tracking-widest text-sm font-bold block mb-4">Tradição
+                            &amp; Excelência</span>
+                        <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Sobre o Ateliê dos Móveis</h2>
+                    </div>
+                    <p class="text-wood-brown/80 text-lg leading-relaxed">
+                        Com mais de uma década de experiência no mercado de alto luxo, o Ateliê dos Móveis nasceu do
+                        desejo de elevar o conceito de mobiliário sob medida. Unimos a marcenaria tradicional ao design
+                        contemporâneo.
+                    </p>
+                    <p class="text-wood-brown/80 text-lg leading-relaxed">
+                        Cada projeto é uma peça única, desenvolvida com as melhores matérias-primas e ferragens
+                        internacionais, garantindo durabilidade e funcionalidade estética para os clientes mais
+                        exigentes.
+                    </p>
+                    <div class="grid grid-cols-2 gap-10 pt-8 border-t border-wood-brown/10">
+                        <div>
+                            <p class="text-4xl font-bold text-matte-gold mb-1">15+</p>
+                            <p class="text-xs uppercase tracking-widest font-bold opacity-60">Anos de História</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-matte-gold mb-1">500+</p>
+                            <p class="text-xs uppercase tracking-widest font-bold opacity-60">Projetos de Luxo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-white" id="diferenciais">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <span class="text-matte-gold uppercase tracking-widest text-sm font-bold block mb-4">Por que nos
+                    escolher</span>
+                <h2 class="text-4xl lg:text-5xl font-bold">Nossos Diferenciais</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="p-10 border border-wood-brown/5 hover:border-matte-gold/50 transition-all bg-off-white/30 group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-matte-gold mb-6 block group-hover:scale-110 transition-transform">diamond</span>
+                    <h3 class="text-xl font-bold mb-4">Materiais Premium</h3>
+                    <p class="text-wood-brown/70 leading-relaxed">Uso exclusivo de madeiras nobres, MDF de alta
+                        densidade e ferragens importadas com tecnologia soft-close.</p>
+                </div>
+                <div
+                    class="p-10 border border-wood-brown/5 hover:border-matte-gold/50 transition-all bg-off-white/30 group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-matte-gold mb-6 block group-hover:scale-110 transition-transform">straighten</span>
+                    <h3 class="text-xl font-bold mb-4">100% Sob Medida</h3>
+                    <p class="text-wood-brown/70 leading-relaxed">Projetos totalmente personalizados para aproveitar
+                        cada milímetro do seu ambiente com precisão matemática.</p>
+                </div>
+                <div
+                    class="p-10 border border-wood-brown/5 hover:border-matte-gold/50 transition-all bg-off-white/30 group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-matte-gold mb-6 block group-hover:scale-110 transition-transform">brush</span>
+                    <h3 class="text-xl font-bold mb-4">Acabamento Artesanal</h3>
+                    <p class="text-wood-brown/70 leading-relaxed">Cuidado minucioso em cada detalhe, junção e lixamento,
+                        realizado por mestres marceneiros experientes.</p>
+                </div>
+                <div
+                    class="p-10 border border-wood-brown/5 hover:border-matte-gold/50 transition-all bg-off-white/30 group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-matte-gold mb-6 block group-hover:scale-110 transition-transform">person_check</span>
+                    <h3 class="text-xl font-bold mb-4">Atendimento VIP</h3>
+                    <p class="text-wood-brown/70 leading-relaxed">Consultoria dedicada com arquitetos parceiros e
+                        acompanhamento direto durante toda a execução.</p>
+                </div>
+                <div
+                    class="p-10 border border-wood-brown/5 hover:border-matte-gold/50 transition-all bg-off-white/30 group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-matte-gold mb-6 block group-hover:scale-110 transition-transform">architecture</span>
+                    <h3 class="text-xl font-bold mb-4">Design Exclusivo</h3>
+                    <p class="text-wood-brown/70 leading-relaxed">Peças desenhadas para refletir sua personalidade,
+                        unindo tendências globais e soluções atemporais.</p>
+                </div>
+                <div
+                    class="p-10 border border-wood-brown/5 hover:border-matte-gold/50 transition-all bg-off-white/30 group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-matte-gold mb-6 block group-hover:scale-110 transition-transform">verified</span>
+                    <h3 class="text-xl font-bold mb-4">Garantia Superior</h3>
+                    <p class="text-wood-brown/70 leading-relaxed">Compromisso com a durabilidade, oferecendo assistência
+                        técnica vitalícia e garantia contratual estendida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-off-white" id="portfolio">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+                <div class="max-w-xl">
+                    <span
+                        class="text-matte-gold uppercase tracking-widest text-sm font-bold block mb-4">Portfólio</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Projetos que Inspiram</h2>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <button
+                        class="px-6 py-2 border-b-2 border-matte-gold text-wood-brown text-sm font-bold uppercase tracking-wider">Todos</button>
+                    <button
+                        class="px-6 py-2 border-b-2 border-transparent text-wood-brown/50 hover:text-wood-brown text-sm font-bold uppercase tracking-wider transition-all">Cozinhas</button>
+                    <button
+                        class="px-6 py-2 border-b-2 border-transparent text-wood-brown/50 hover:text-wood-brown text-sm font-bold uppercase tracking-wider transition-all">Closets</button>
+                    <button
+                        class="px-6 py-2 border-b-2 border-transparent text-wood-brown/50 hover:text-wood-brown text-sm font-bold uppercase tracking-wider transition-all">Salas</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden lg:col-span-2 aspect-[16/9] lg:aspect-auto">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                        <div
+                            class="text-center text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="uppercase tracking-widest text-xs font-medium mb-2 block">Cozinha de Alto
+                                Padrão</span>
+                            <h4 class="text-2xl font-bold mb-4">Residência Alpha III</h4>
+                            <span class="material-symbols-outlined">add_circle</span>
+                        </div>
+                    </div>
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEh2e1rjfAkxxAjTCpf5IYi1EkBj9fyXvVV3lwUKkohCQ7ZW0Gwk0s0FVaU5F_jDcpnr80SxB4JZqZvMmzF6hNrED5aDOAvGFuvGJ4-EoTBDI10mi9i_b1O6vfN5doxV77W1_L5DxMsq5rv4mD8qYP0es_Eg3HNVBs7ZS5pPNPnweAQYkSTL4HupVzjebcgBnVmWt92V2iKdG9mQxNkkeO9gLt5nTwVkz3yuanw3_XX39kYt_qzlFWyG5LS8PDRBPv61gQDDFGN68');">
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden aspect-square">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                        <div
+                            class="text-center text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="uppercase tracking-widest text-xs font-medium mb-2 block">Dormitórios</span>
+                            <h4 class="text-xl font-bold mb-4">Closet Master Jardins</h4>
+                        </div>
+                    </div>
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCK81EM0_QwcfD-_AxKMYGE1T1cj00usSh9oFHYBq3cUDmAjaacKqEs3u88l5OXHq1RrRutkNenWhq3MixpRHtKN7aHAN4Yeb66-htLTPcqKuuYTfnt5DZM_9qVX8TABfUxPgtOtabqsQXwhciKeNCqis3_tmgh61qh3p-32wXJw4A_L0oYP_1RqItBX6J21HNdD8Q1hbS9KBmN5bj84xlM2G1V2R1aVMHji1WlSGwffsdPq-ew1XyoQ622sTMIgxUn-PCs8o3fnIA');">
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden aspect-square">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                        <div
+                            class="text-center text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="uppercase tracking-widest text-xs font-medium mb-2 block">Corporativo</span>
+                            <h4 class="text-xl font-bold mb-4">Escritório Executive</h4>
+                        </div>
+                    </div>
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsyoTkUu2mfmOhCihv6e2_QWO8L7Z3xwQnTSKMOEcC58CfhprYzucOL80BY5gr5O5qPqeSGjetzkIg40m0JCm6qz8FsnOHf2fEabRwY7c0LvPcqX1ckQHaLIgSuJcfyXGGzxopF_J8fkgWGwgjsRkTnrqmi5Rcv5Pgr0gLJd2XBwTRpCOKKjyqfyJAsAUykb2_T3xLCQ86ywjhbhpwOMpF7BpfGbrJxYVoSDBWwkf6q5gDl11USQKHil8nGt6JpjsMD7DCnmxdhc8');">
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden lg:col-span-2 aspect-[16/9] lg:aspect-auto">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                        <div
+                            class="text-center text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="uppercase tracking-widest text-xs font-medium mb-2 block">Área Gourmet</span>
+                            <h4 class="text-2xl font-bold mb-4">Living Integrado Leblon</h4>
+                        </div>
+                    </div>
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIRG0QUKIYqlfQYY8OMYIPJuh3H3q6CG_7fCWqzQekmE3-F9anHjZTQRoV20EvFEQgZ3QOxhWwePMjRAG3keWmFzjhyr7VkQZTIxM-UJfmvVuB8OuNrORSgHgW4doeBxtkJNRJ6Z2QotCpHxMEOzaqrj0Jr6RBQLtvX3GoB3QQoypiW6kHf00VUfcul7vjUU1o8n943-v9l1c8OP0MCimkoq7rt7z5PPh7juai1eKuagez4a3y7fgXVhC0TUljARbxqcSbrBuBavI');">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-wood-brown text-white" id="processo">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <span class="text-matte-gold uppercase tracking-widest text-sm font-bold block mb-4">Metodologia</span>
+                <h2 class="text-4xl lg:text-5xl font-bold">Processo de Criação</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+                <div class="hidden lg:block absolute top-10 left-[15%] right-[15%] h-px bg-white/10 z-0"></div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-matte-gold bg-wood-brown flex items-center justify-center mb-8 font-bold text-2xl text-matte-gold">
+                        01</div>
+                    <h3 class="text-xl font-bold mb-4">Briefing &amp; Visita</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Alinhamento inicial e levantamento métrico
+                        detalhado do espaço.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-matte-gold bg-wood-brown flex items-center justify-center mb-8 font-bold text-2xl text-matte-gold">
+                        02</div>
+                    <h3 class="text-xl font-bold mb-4">Projeto em 3D</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Visualização realista e ajustes técnicos para
+                        aprovação final.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-matte-gold bg-wood-brown flex items-center justify-center mb-8 font-bold text-2xl text-matte-gold">
+                        03</div>
+                    <h3 class="text-xl font-bold mb-4">Produção</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Fabricação artesanal com maquinários de última
+                        geração.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-matte-gold bg-wood-brown flex items-center justify-center mb-8 font-bold text-2xl text-matte-gold">
+                        04</div>
+                    <h3 class="text-xl font-bold mb-4">Instalação</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Montagem técnica limpa e organizada com supervisão
+                        de engenharia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-20">O que dizem nossos clientes</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-off-white p-10 rounded-sm relative">
+                    <span
+                        class="material-symbols-outlined text-matte-gold/20 text-7xl absolute top-4 left-4">format_quote</span>
+                    <p class="relative z-10 text-wood-brown/80 italic mb-8 leading-relaxed">
+                        "O nível de detalhamento e o cuidado com a instalação foram surpreendentes. Superou todas as
+                        minhas expectativas."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cover"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLhjLHS1y1drYcq4E1Wm9TpKqyx73CB4COOU12Tzt2iPDmd2LODYYLoSAyedH3Amb_Hm_OLvttKGvpEsGMh62Zz8GGs9pP6kc9E92hk9zyaZhfvLCQpvdIyqdWq_7ZIaAkVYZizc8tjitiHaBQK88k6na-pBegUCX5aoN3yncGxHvZC67TwXM4Bt22z0OK5p95Zf2Os6g1bINEuV1Eec4J4MVJoLAwNgP9iUsDR0VwmEDRI7SjH7gCguCr7i4zVT7o1EK3qvhp5YU');">
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Ana Paula Cavalcante</p>
+                            <p class="text-xs text-matte-gold">Arquiteta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-off-white p-10 rounded-sm relative">
+                    <span
+                        class="material-symbols-outlined text-matte-gold/20 text-7xl absolute top-4 left-4">format_quote</span>
+                    <p class="relative z-10 text-wood-brown/80 italic mb-8 leading-relaxed">
+                        "Contratei para minha casa inteira. O resultado é impecável, os materiais são visivelmente de
+                        qualidade superior."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cover"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIWX5_4kYVGoSztCaWwOYNGdBXCrgMfR74E4-JUCL5epdLGctzV93UsoiqVsO7i5MuW7e5cKo6QKY2Db-F8Q2y4lsiqoYOMHf9WQmt2mxpjt7zEZ_H-JCA-Zfe0gKpKMVBIha1bdOStGARYcBbF5RHC814_XpYd_1luAJP7LLYJq3OgOeTAo-56K0pOOewsMUEdZB_12tW4ps7REDwy9EPMsYR_NbN1ItAyp6SyHRMxNLxvE5f9qhdSytZO_TWNpJG8vPYOmSJck0');">
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Ricardo Sampaio</p>
+                            <p class="text-xs text-matte-gold">Empresário</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-off-white p-10 rounded-sm relative">
+                    <span
+                        class="material-symbols-outlined text-matte-gold/20 text-7xl absolute top-4 left-4">format_quote</span>
+                    <p class="relative z-10 text-wood-brown/80 italic mb-8 leading-relaxed">
+                        "Excelente suporte no pós-venda. Tive uma dúvida sobre manutenção e me atenderam prontamente."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cover"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqpyc_NQfa6Pkgn4QqJasClrFfNjTqWmz8TWd3IZQ49cqOI0mBwWkm0ooN_Z1x8HaMNJxya8L9IAZQEGbdomzRUc4VhOrG6B8cYZ0Bh9MFN9jhRxwzgHCcaFwijCbGbBAH0opz8syKuiCwwLKIX_gtfhmFGkxa9HoG_E11d3Rg8D5kE7_1X4U8ZFdwijUFRd3EghoHNTJ-VG-yK2SX6Tcz-Zw2WO_HpAEEeLTMJvsJZ8sUZeyGGQIduUBnM_a6BzgpRTAH7Ij4fzM');">
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Juliana Mendes</p>
+                            <p class="text-xs text-matte-gold">Proprietária</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-off-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <details class="group bg-white border border-wood-brown/5">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold">
+                        <span>Qual o prazo médio de entrega?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180 text-matte-gold">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-wood-brown/70 leading-relaxed">
+                        Trabalhamos com um prazo de 45 a 60 dias úteis após a aprovação do projeto executivo, variando
+                        conforme a complexidade da obra.
+                    </div>
+                </details>
+                <details class="group bg-white border border-wood-brown/5">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold">
+                        <span>Vocês atendem outras regiões fora de São Paulo?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180 text-matte-gold">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-wood-brown/70 leading-relaxed">
+                        Atendemos toda a Grande São Paulo, Interior e Litoral. Para outras regiões, sob consulta
+                        logística.
+                    </div>
+                </details>
+                <details class="group bg-white border border-wood-brown/5">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold">
+                        <span>É possível parcelar o pagamento?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180 text-matte-gold">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-wood-brown/70 leading-relaxed">
+                        Sim, oferecemos condições de pagamento facilitadas em até 10x sem juros ou desconto especial
+                        para pagamentos à vista.
+                    </div>
+                </details>
+                <details class="group bg-white border border-wood-brown/5">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold">
+                        <span>Posso levar meu próprio projeto arquitetônico?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180 text-matte-gold">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-wood-brown/70 leading-relaxed">
+                        Com certeza. Somos especializados em executar projetos de arquitetos externos com máxima
+                        fidelidade técnica.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    <section class="relative py-24 bg-wood-brown" id="contato">
+        <div class="absolute inset-0 opacity-10 grayscale pointer-events-none"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxO8dQY-vtuicTl1gDZgwtChtYTXAH4AuHGq0AehYSZCfjEen52Oeyr8jg_Uy8sWIbMwaLx8rrAkwUNQIGQhID1RZT_CnQTXyRNM6yQaU9iYEVtjzd1CVsRYglA2-QO3_Tc9BbKjTT3QfnyhIOgR-hBNrS2SEv0nc5xypmKJ2mBAFqaZ_GXS6vw0Wr0Wsz_MK1revOPs7CRT_oXxUuymP1swZ9Gh0jsYTKLczg6NPT4_dsPwHtrLAXY38memNb_yDdjzg8h3Z-xLI'); background-size: cover;">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="text-white">
+                    <h2 class="text-4xl lg:text-6xl font-bold leading-tight mb-8">Transforme seu ambiente com móveis
+                        planejados de alto padrão</h2>
+                    <p class="text-white/70 text-lg mb-12">Estamos prontos para tirar seu sonho do papel. Entre em
+                        contato e agende uma consultoria sem compromisso.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-5">
+                            <span class="material-symbols-outlined text-matte-gold">location_on</span>
+                            <div>
+                                <h4 class="font-bold">Showroom Principal</h4>
+                                <p class="text-white/60">Av. Marcenaria Ateliê dos Movéis, 12345 - Santa Luzia, MG</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <span class="material-symbols-outlined text-matte-gold">phone_iphone</span>
+                            <div>
+                                <h4 class="font-bold">WhatsApp</h4>
+                                <p class="text-white/60">(31) 99999-9999</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <span class="material-symbols-outlined text-matte-gold">mail</span>
+                            <div>
+                                <h4 class="font-bold">E-mail</h4>
+                                <p class="text-white/60">contato@ateliedosmoveis.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-10 md:p-12 shadow-2xl">
+                    <h3 class="text-3xl text-wood-brown font-bold mb-8">Solicite um Orçamento</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label
+                                    class="block text-xs uppercase tracking-widest font-bold mb-2 text-wood-brown/60">Nome
+                                    Completo</label>
+                                <input
+                                    class="w-full border-b border-wood-brown/20 focus:border-matte-gold outline-none py-3 text-wood-brown transition-colors"
+                                    type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs uppercase tracking-widest font-bold mb-2 text-wood-brown/60">WhatsApp</label>
+                                <input
+                                    class="w-full border-b border-wood-brown/20 focus:border-matte-gold outline-none py-3 text-wood-brown transition-colors"
+                                    type="tel" />
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs uppercase tracking-widest font-bold mb-2 text-wood-brown/60">E-mail</label>
+                            <input
+                                class="w-full border-b border-wood-brown/20 focus:border-matte-gold outline-none py-3 text-wood-brown transition-colors"
+                                type="email" />
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs uppercase tracking-widest font-bold mb-2 text-wood-brown/60">Qual
+                                ambiente deseja orçar?</label>
+                            <select
+                                class="w-full border-b border-wood-brown/20 focus:border-matte-gold outline-none py-3 text-wood-brown bg-transparent transition-colors">
+                                <option>Cozinha Completa</option>
+                                <option>Dormitórios / Closet</option>
+                                <option>Área Gourmet</option>
+                                <option>Home Office</option>
+                                <option>Residência Completa</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs uppercase tracking-widest font-bold mb-2 text-wood-brown/60">Mensagem</label>
+                            <textarea
+                                class="w-full border-b border-wood-brown/20 focus:border-matte-gold outline-none py-3 text-wood-brown transition-colors resize-none"
+                                rows="3"></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-matte-gold hover:bg-[#b58f4d] text-white py-5 font-bold uppercase tracking-[0.2em] text-sm transition-all">
+                            Enviar Solicitação
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-matte-black py-16 text-white border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="material-symbols-outlined text-matte-gold">carpenter</span>
+                        <h2 class="text-white text-lg font-bold uppercase tracking-widest">Ateliê dos Móveis</h2>
+                    </div>
+                    <p class="text-white/40 text-sm leading-relaxed">
+                        Referência em marcenaria de alto padrão, transformando lares com móveis que são verdadeiras
+                        obras de arte.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-matte-gold uppercase tracking-[0.2em] text-xs font-bold mb-8">Navegação</h4>
+                    <ul class="space-y-4 text-sm text-white/60">
+                        <li><a class="hover:text-white transition-colors" href="#inicio">Home</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#sobre">Sobre Nós</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#portfolio">Portfólio</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#diferenciais">Diferenciais</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-matte-gold uppercase tracking-[0.2em] text-xs font-bold mb-8">Suporte</h4>
+                    <ul class="space-y-4 text-sm text-white/60">
+                        <li><a class="hover:text-white transition-colors" href="#">Privacidade</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Termos de Uso</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Garantia</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-matte-gold uppercase tracking-[0.2em] text-xs font-bold mb-8">Redes Sociais</h4>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-matte-gold hover:border-matte-gold transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">photo_camera</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-matte-gold hover:border-matte-gold transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 uppercase tracking-widest">
+                <p>© 2024 Ateliê dos Móveis. Todos os direitos reservados.</p>
+                <div class="flex items-center gap-2">
+                    <span>Feito à mão com
+                        materiais</span>
+                    <span class="material-symbols-outlined text-[12px] text-matte-gold">favorite</span>
+                    <span>para uma vida de luxo</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
